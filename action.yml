@@ -1,0 +1,30 @@
+name: 'action-sftp'
+description: 'Packs control as well as data directories into an .ipk file and optionally creates a signed opkg repository.'
+author: "resmh"
+inputs:
+  host:
+    description: 'Host'
+    required: true
+    default: ''
+  user:
+    description: 'Username'
+    required: true
+    default: ''
+  password:
+    description: 'Password'
+    required: false
+    default: ''
+  source:
+    description: 'Source files'
+    required: true
+    default: ''
+  target:
+    description: 'Target directory'
+    required: false
+    default: ''
+runs:
+  using: 'node12'
+  main: 'start.js'
+branding:
+  icon: 'arrow-up-circle'
+  color: 'green'
